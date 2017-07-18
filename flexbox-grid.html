@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Flexbox vs Grid</title>
+	<style>
+	.grid {
+		display: grid;
+		grid-template: 50px 100px 35px / repeat(3, 1fr);
+		grid-template-areas:
+			"item-a item-b item-b"
+			"item-a item-c item-d"
+			"item-e item-e item-d"
+	}
+	.item-a {grid-area: item-a; background-color: yellow;}
+	.item-b {grid-area: item-b; background-color: red;}
+	.item-c {grid-area: item-c; background-color: blue;}
+	.item-d {grid-area: item-d; background-color: peru;}
+	.item-e {grid-area: item-e; background-color: green;}
+
+	.flexbox {
+		display: flex;
+		justify-content: space-between;
+	}
+	</style>
+</head>
+<body>
+	<!-- Grid -->
+	<div class="grid">
+		<div class="item-a">Item a</div>
+		<div class="item-b">Item b</div>
+		<div class="item-c">Item c</div>
+		<div class="item-d">Item d</div>
+		<div class="item-e">Item e</div>
+	</div>
+
+	<hr>
+
+	<div class="flexbox">
+		<div class="item-fa">Item a</div>
+		<div class="item-fb">Item b</div>
+		<div class="item-fc">Item c</div>
+		<div class="item-fd">Item d</div>
+		<div class="item-fe">Item e</div>
+	</div>
+</body>
+</html>

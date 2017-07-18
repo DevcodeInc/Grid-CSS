@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Grid Row / Column</title>
+
+	<style>
+		.grid {
+			display: grid;
+			grid-template-columns: [a] 1fr [b] 2fr [c] 1fr [d];
+			grid-template-rows: [a] 50px [b] 300px [c] 50px [d];
+
+			background-color: #CCC;
+		}
+		.header {
+			background-color: #CF0000;
+			grid-column-start: 1;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+		.sidebar {
+			background-color: #DBBA09;
+			grid-column: 1/2;
+			grid-row: b/d;
+		}
+		.main {
+			background-color: #005CD5;
+			grid-column: b/4;
+			grid-row: 2/c;
+		}
+		.footer {
+			background-color: #00C84A;
+			grid-column: 2/span 2;
+			grid-row: 3/4;
+		}
+	</style>
+</head>
+<body>
+	<section class="grid">
+		<header class="header">Header</header>
+		<aside class="sidebar">Sidebar</aside>
+		<main class="main">Main</main>
+		<footer class="footer">Footer</footer>
+	</section>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Grid</title>
+
+	<style>
+		.grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 50px;
+
+			grid-gap: 20px 10px;
+
+			grid-auto-flow: row;
+			grid-auto-columns: 75px;
+			grid-auto-rows: 150px;
+
+			grid: 50px / 1fr 1fr;
+
+			/*
+			<'grid-template'>
+			| <'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?
+			|
+			[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>
+			*/
+
+			background-color: #CCC;
+		}
+		.header {background-color: #CF0000;}
+		.sidebar {background-color: #DBBA09;}
+		.main {background-color: #005CD5;}
+		.footer {background-color: #00C84A;}
+	</style>
+</head>
+<body>
+	<section class="grid">
+		<header class="header">Header</header>
+		<aside class="sidebar">Sidebar</aside>
+		<main class="main">Main</main>
+		<footer class="footer">Footer</footer>
+	</section>
+</body>
+</html>

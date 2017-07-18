@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Grid Gap</title>
+
+	<style>
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 50px 300px 100px;
+
+			grid-template-areas:
+				"header header header"
+				"sidebar main main"
+				"sidebar footer footer";
+
+			/*grid-column-gap: 10px;
+			grid-row-gap: 20px;*/
+
+			grid-gap: 20px 10px;
+
+			background-color: #CCC;
+		}
+		.header {
+			background-color: #CF0000;
+			grid-area: header;
+		}
+		.sidebar {
+			background-color: #DBBA09;
+			grid-area: sidebar;
+		}
+		.main {
+			background-color: #005CD5;
+			grid-area: main;
+		}
+		.footer {
+			background-color: #00C84A;
+			grid-area: footer;
+		}
+	</style>
+</head>
+<body>
+	<section class="grid">
+		<header class="header">Header</header>
+		<aside class="sidebar">Sidebar</aside>
+		<main class="main">Main</main>
+		<footer class="footer">Footer</footer>
+	</section>
+</body>
+</html>
